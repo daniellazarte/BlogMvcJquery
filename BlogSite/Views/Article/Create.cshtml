@@ -1,0 +1,100 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Create</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/Create.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/medium-editor.min.css">
+    <link rel="stylesheet" href="~/css/editor.css">
+    <link rel="stylesheet" href="~/css/themes/flat.min.css" id="medium-editor-theme">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+
+
+</head>
+<body>
+        <div contenteditable=true data-text="(+)Título" class="titulo" id="titulo"></div>
+        <div id="formulario" class="formulario">
+            <div contenteditable=true data-text="(+)Agregue su descripción" id="descripcion"></div>
+
+            <div class="editable" id="htmlContenido" contenteditable=true data-text="(+)Displayate, que no se te olvide nada =)"></div>
+           
+            <input value="Crear" id="btnAjax" class="boton"  readonly />
+
+        </div>
+
+        <div id="message">
+            <img id="blah" src="http://www.ntsc-tv.com/images/tv/pixel-1x1-clear.gif" alt="Tu Foto" width="300" />
+        </div>
+
+</body>
+</html>
+<script src="~/javascript/jquery.min.js"></script>
+<script src="~/javascript/medium-editor.min.js"></script>
+<script>
+
+    var editor = new MediumEditor('.editable', {
+        buttonLabels: 'fontawesome'
+    });
+
+    $('#titulo').each(function (index) {
+        // Your code
+        console.log($(this).html());
+    });
+
+    $('#btnAjax').click(function ajaxCall() {
+        var link = this;
+        var dt = new Date();
+
+        if ($("#titulo").html().length > 8) {
+            $('#btnAjax').val('Guardando...');
+            var ArticleData = {
+                idArticle: 0,
+                idLine: 1,
+                Titulo: $('#titulo').html(),
+                Subtitulo: '<Sin Subtitulo>',
+                Descripcion: $('#descripcion').html(),
+                Contenido: $('#htmlContenido').html(),
+                imgArticle: 'Ninguno.jpg',
+                Creador: 'AMIGO',
+                Modificador: 'AMIGO',
+                dtmfechaModificacion: dt
+            };
+
+            $.ajax({
+                url: "../Article/SaveArticle",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(ArticleData),
+                success: function (response) {
+                    response ? $('#btnAjax').val('Excelente') : alert("Vaya, esto es bochornoso, lamentamos los inconvenientes :(");
+                    var idArticle = response.idArticle;
+                    window.location.href = "../Article/AddImages/" + idArticle;
+                }
+
+            });
+
+        }
+        else
+        {
+            $('#titulo').addClass('error');
+        }
+
+    });
+
+
+
+
+</script>

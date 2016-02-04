@@ -1,0 +1,57 @@
+﻿@using Blog.Librerias.Entidades;
+@model List<BEQuestion>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" >
+            <h3 class="text-center">Reacciones</h3>
+            <ul class="timeline" id="rollReaction">
+
+
+                @foreach (BEQuestion oQuestion in Model)
+                {
+                    if (oQuestion.idQuestion % 2 == 0)
+                    {
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="http://vignette3.wikia.nocookie.net/gtawiki/images/6/64/GTA-B-day.png/revision/latest?cb=20130702200214" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Creado Por</h4>
+                                    <h4 class="subheading">@oQuestion.Alias</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        @oQuestion.Question
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="http://vignette3.wikia.nocookie.net/gtawiki/images/6/64/GTA-B-day.png/revision/latest?cb=20130702200214" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Creado Por</h4>
+                                    <h4 class="subheading">@oQuestion.Alias</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        @oQuestion.Question
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>

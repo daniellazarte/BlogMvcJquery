@@ -1,0 +1,4 @@
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\bin\Release\General.Librerias.CodigoUsuario.dll
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\bin\Release\General.Librerias.CodigoUsuario.pdb
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\obj\Release\General.Librerias.CodigoUsuario.dll
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\obj\Release\General.Librerias.CodigoUsuario.pdb

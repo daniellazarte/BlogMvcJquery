@@ -1,0 +1,4 @@
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.Entidades\bin\Release\Blog.Librerias.Entidades.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.Entidades\bin\Release\Blog.Librerias.Entidades.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.Entidades\obj\Release\Blog.Librerias.Entidades.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.Entidades\obj\Release\Blog.Librerias.Entidades.pdb

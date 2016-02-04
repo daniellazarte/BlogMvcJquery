@@ -1,0 +1,5 @@
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\bin\Debug\General.Librerias.CodigoUsuario.dll
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\bin\Debug\General.Librerias.CodigoUsuario.pdb
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\obj\Debug\General.Librerias.CodigoUsuario.dll
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\obj\Debug\General.Librerias.CodigoUsuario.pdb
+C:\Proyectos\DOP 2016\Blog\General.Librerias.CodigoUsuario\obj\Debug\General.Librerias.CodigoUsuario.csprojResolveAssemblyReference.cache

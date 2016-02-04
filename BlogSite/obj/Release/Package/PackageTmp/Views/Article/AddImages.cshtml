@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Arega Imagenes a tu contenido </title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/Create.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/medium-editor.min.css">
+    <link rel="stylesheet" href="~/css/editor.css">
+    <link rel="stylesheet" href="~/css/themes/flat.min.css" id="medium-editor-theme">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+    <h1>Ya casi esta listo, Agrega imágenes a tu contenido</h1>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+   <div class="image-upload">
+            <label for="file">
+                    <img src="~/img/pictureUpload.png" alt="Agregar Fotografía">
+                </label>
+            <p>Agrega Imagenes</p>
+            <input type="file" name="file" id="file" />
+    </div>
+    <input value="Crear" id="btnAjax" class="boton" readonly type="submit" />
+    <input value="No, Gracias" id="nothanks" class="boton" readonly  />
+    <div id="message">
+        <img id="blah" src="http://www.ntsc-tv.com/images/tv/pixel-1x1-clear.gif" alt="Tu Foto"  />
+    </div>
+}
+</body>
+</html>
+<script src="~/javascript/jquery.min.js"></script>
+<script>
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#nothanks").click(function () {
+        window.location.href = "../../home";
+    });
+
+
+
+</script>

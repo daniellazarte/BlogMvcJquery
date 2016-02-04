@@ -1,0 +1,59 @@
+﻿body {
+      font-family: 'Lora', 'Times New Roman', serif;
+      font-size: 20px;
+      color: #404040;
+}
+.formulario{
+    margin:0 auto;
+    display:block;
+    height:400px;
+    padding-top:20px;
+    padding-left:20px;
+    align-content:center;
+    width:50%;
+   
+}
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text)
+}
+#subtitulo{
+font-size:3em;
+}
+
+.boton{
+    font-family:inherit;
+    font-size:1em;
+    background-color:#57c67e;
+    border:none;
+    color:#ffffff;
+    text-align:center;
+    width:200px;
+    height:40px;
+    cursor:pointer;
+}
+.boton:hover{
+ background-color:#8bbb13;
+}
+.titulo{
+    font-size:3em;
+    text-align:center;
+    font-weight:900;
+
+
+}
+
+.image-upload > input
+{
+    display: none;
+    
+}
+.image-upload > label
+{
+    cursor:pointer;
+    
+}
+.error {
+    color: #ff0000;
+
+}

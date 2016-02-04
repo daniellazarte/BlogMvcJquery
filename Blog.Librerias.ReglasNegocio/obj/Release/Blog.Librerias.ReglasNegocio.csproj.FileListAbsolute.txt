@@ -1,0 +1,13 @@
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\Blog.Librerias.ReglasNegocio.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\Blog.Librerias.ReglasNegocio.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\Blog.Librerias.DataController.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\Blog.Librerias.Entidades.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\General.Librerias.CodigoUsuario.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\General.Librerias.EntidadesNegocio.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\Blog.Librerias.DataController.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\Blog.Librerias.Entidades.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\General.Librerias.CodigoUsuario.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Release\General.Librerias.EntidadesNegocio.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\obj\Release\Blog.Librerias.ReglasNegocio.csprojResolveAssemblyReference.cache
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\obj\Release\Blog.Librerias.ReglasNegocio.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\obj\Release\Blog.Librerias.ReglasNegocio.pdb

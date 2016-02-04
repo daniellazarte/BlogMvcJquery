@@ -1,0 +1,5 @@
+C:\Proyectos\DOP 2016\Blog\General.Librerias.EntidadesNegocio\bin\Debug\General.Librerias.EntidadesNegocio.dll
+C:\Proyectos\DOP 2016\Blog\General.Librerias.EntidadesNegocio\bin\Debug\General.Librerias.EntidadesNegocio.pdb
+C:\Proyectos\DOP 2016\Blog\General.Librerias.EntidadesNegocio\obj\Debug\General.Librerias.EntidadesNegocio.csprojResolveAssemblyReference.cache
+C:\Proyectos\DOP 2016\Blog\General.Librerias.EntidadesNegocio\obj\Debug\General.Librerias.EntidadesNegocio.dll
+C:\Proyectos\DOP 2016\Blog\General.Librerias.EntidadesNegocio\obj\Debug\General.Librerias.EntidadesNegocio.pdb

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_homeSite.cshtml";
+}
+ <!-- Ultimos Posts o Rating Post -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" id="articles">
+            <!-- Begin Posts -->
+            @*@using (Ajax.BeginForm("../home/getArticlesFromLine", "", new AjaxOptions { HttpMethod = "post", UpdateTargetId = "articles", InsertionMode = InsertionMode.Replace }, new { id = "space_Articles" }))
+            {
+
+            }*@
+
+            <!-- Pager -->
+            <ul class="pager">
+                <li class="next">
+                    <a href="#">Older Posts &rarr;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

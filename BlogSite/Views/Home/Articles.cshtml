@@ -1,0 +1,21 @@
+﻿@using Blog.Librerias.Entidades;
+@model List<BEArticle>
+
+@foreach (BEArticle oArticle in Model)
+{
+    <div class="post-preview">
+        @*<a href="Article/Posts/@oArticle.idArticle">*@
+        <a href="@Url.Action("../Article/Posts", new { id = oArticle.idArticle, ignoreThisBit = oArticle.GenerateSlug() })">
+            <h2 class=" post-title">
+                @oArticle.Titulo
+            </h2>
+            <h3 class="post-subtitle">
+                @oArticle.Descripcion.Trim()
+            </h3>
+        </a>
+        <p class="post-meta">Creado por <a href="#">
+            @oArticle.Creador</a> un @oArticle.Fecha.ToString("dddd") @oArticle.Fecha.ToString("dd") de @oArticle.Fecha.ToString("Y")
+        </p>
+    </div>
+    <hr>
+}

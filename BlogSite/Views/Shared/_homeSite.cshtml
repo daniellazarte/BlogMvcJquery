@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bienvenidos </title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/clean-blog.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <!-- Navigation -->
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home">Navidad 2015, sin picarse, sin resentirse.</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/Home">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="/Article/Create">(+)Agregar</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header Async Call-->
+ 
+    <header class="intro-header" style="background-image: url('../img/home-bg.jpg')">
+        <img src="http://31.media.tumblr.com/695241873ae4a22725ea95b9612044b9/tumblr_nx1o09TGwb1tpu1geo1_400.gif" id="pajaro" class="piopio" width="100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading" id="pageHeader">
+                        Loading...
+                        @using (Ajax.BeginForm("../home/getLineBlog", "", new AjaxOptions { HttpMethod = "post", UpdateTargetId = "pageHeader", InsertionMode = InsertionMode.Replace }, new { id = "space_header" }))
+                        {
+
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="progress" style="display:none">
+        <h4>Cargando Articulos...</h4>
+        <img src="http://img.ffffound.com/static-data/assets/6/f71fbabb835aebca4489ba2e0d5cd6aff3ad528c_m.gif" alt="Cargando"></div>
+ 
+   
+
+    @RenderBody()
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/daniellazarte">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/ddaniellazarte">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/daniellazarte">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Daniel Lazarte</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/javascript/jquery.min.js"></script>
+    <script src="~/javascript/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/javascript/bootstrap.min.js"></script>
+    <script src="~/javascript/clean-blog.js"></script>
+
+</body>
+</html>
+<script>
+    var pageSize = 10;
+    var pageIndex = 1;
+
+    //MOdificado Carga articulos en Demanda
+    GetData();
+
+
+    $(document).ready(function () {
+        GetData();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() ==
+               $(document).height() - $(window).height()) {
+                GetData();
+            }
+        });
+    });
+
+
+    function GetData() {
+        $.ajax({
+            type: 'GET',
+            url: '../Home/GetData',
+            data: { "pageindex": pageIndex, "pagesize": pageSize },
+            dataType: 'json',
+            success: function (data) {
+                if (data != null) {
+                    for (var i = 0; i < data.length; i++) {
+                        $("#articles").append("<div class='post-preview'>" +
+                        "<a href='/Article/Posts/" + data[i].idArticle + "/" + convertToSlug(data[i].Titulo) + "'>" +
+                        " <h2 class=' post-title'>" + data[i].Titulo + "</h2>" +
+                        "<h3 class='post-subtitle'>" + data[i].Descripcion + "</h3></a>" +
+                        "<p class='post-meta'>Creado por <a href='#'>" + data[i].Creador + " un " + data[i].FechaString + "</a>" +
+                        "</p>" +
+                        "</div>" + "</hr>"
+                        
+                        );
+                    }
+                    pageIndex++;
+                }
+            },
+            beforeSend: function () {
+                $("#progress").show();
+            },
+            complete: function () {
+                $("#progress").hide();
+            },
+            error: function () {
+                alert("vaya que bochornoso :( algo salio mal!");
+            }
+        });
+    }
+</script>

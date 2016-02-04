@@ -1,0 +1,7 @@
+﻿@using Blog.Librerias.Entidades;
+@model BEArticle
+
+<!--Async Render Content...-->
+<p>@Model.Descripcion</p>
+@Html.Raw(HttpUtility.HtmlDecode(Model.Contenido));
+

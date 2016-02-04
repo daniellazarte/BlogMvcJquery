@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E38D8DC0-8381-45A8-93EC-65D9933497FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blog.Librerias.ReglasNegocio</RootNamespace>
+    <AssemblyName>Blog.Librerias.ReglasNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BRArticle.cs" />
+    <Compile Include="BRGeneral.cs" />
+    <Compile Include="BRLine.cs" />
+    <Compile Include="BRQuestion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Librerias.DataController\Blog.Librerias.DataController.csproj">
+      <Project>{5d51a9ca-aec4-4ada-b027-561bcdf55cec}</Project>
+      <Name>Blog.Librerias.DataController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blog.Librerias.Entidades\Blog.Librerias.Entidades.csproj">
+      <Project>{3695b675-21fe-4f4d-aac5-16f53bc5cda4}</Project>
+      <Name>Blog.Librerias.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General.Librerias.CodigoUsuario\General.Librerias.CodigoUsuario.csproj">
+      <Project>{e1627937-b88f-4e60-bcde-ce09545cd362}</Project>
+      <Name>General.Librerias.CodigoUsuario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General.Librerias.EntidadesNegocio\General.Librerias.EntidadesNegocio.csproj">
+      <Project>{80f016ea-59df-4110-b35c-54c3c3d5acbc}</Project>
+      <Name>General.Librerias.EntidadesNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,7 @@
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\bin\Release\Blog.Librerias.DataController.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\bin\Release\Blog.Librerias.DataController.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\bin\Release\Blog.Librerias.Entidades.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\bin\Release\Blog.Librerias.Entidades.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\obj\Release\Blog.Librerias.DataController.csprojResolveAssemblyReference.cache
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\obj\Release\Blog.Librerias.DataController.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.DataController\obj\Release\Blog.Librerias.DataController.pdb

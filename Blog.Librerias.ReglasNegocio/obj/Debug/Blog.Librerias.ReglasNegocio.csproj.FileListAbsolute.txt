@@ -1,0 +1,13 @@
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\obj\Debug\Blog.Librerias.ReglasNegocio.csprojResolveAssemblyReference.cache
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\Blog.Librerias.ReglasNegocio.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\Blog.Librerias.ReglasNegocio.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\Blog.Librerias.DataController.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\Blog.Librerias.Entidades.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\Blog.Librerias.DataController.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\Blog.Librerias.Entidades.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\obj\Debug\Blog.Librerias.ReglasNegocio.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\obj\Debug\Blog.Librerias.ReglasNegocio.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\General.Librerias.CodigoUsuario.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\General.Librerias.EntidadesNegocio.dll
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\General.Librerias.CodigoUsuario.pdb
+C:\Proyectos\DOP 2016\Blog\Blog.Librerias.ReglasNegocio\bin\Debug\General.Librerias.EntidadesNegocio.pdb
